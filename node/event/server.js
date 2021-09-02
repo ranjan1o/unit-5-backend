@@ -25,19 +25,19 @@ function checkEvent() {
     readline1.question("press 1 to see all books or press 2 to update the store or press 3 to quit \n", (btn) => {
         if (btn == "1") {
             BooksEvent.emit("press 1", books)
-            readline1.close()
+          
+             checkEvent()
 
         } else if (btn == "2") {
             readline1.question("enter book name \n", (newBookname) => {
                 BooksEvent.emit("press 2", { books: books, newBook: newBookname});
-                readline1.close()
-
+                 checkEvent()
+                 
             })
 
         } else if (btn == "3") {
             readline1.question("press y to quit  else n to go home page \n", (par) => {
                 if (par == "y") {
-                    BooksEvent.emit("press 3")
                     readline1.close()
                 } else if (par == "n") {
                     checkEvent()
