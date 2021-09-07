@@ -1,0 +1,340 @@
+> use Assigment
+switched to db Assigment
+> show databases
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db.createCollection("users")
+{ "ok" : 1 }
+> use users
+switched to db users
+> db.insertMany({first_name:"a",last_name:"1",email:"a1@gmail.com",gender:"male",ip_address:"a11",age:"21"})
+uncaught exception: TypeError: db.insertMany is not a function :
+@(shell):1:1
+> db.insert({first_name:"a",last_name:"1",email:"a1@gmail.com",gender:"male",ip_address:"a11",age:"21"})
+uncaught exception: TypeError: db.insert is not a function :
+@(shell):1:1
+> db.users.insert({first_name:"a",last_name:"1",email:"a1@gmail.com",gender:"male",ip_address:"a11",age:"21"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"b",last_name:"2",email:"b1@gmail.com",gender:"femle",ip_address:"b22",age:"22"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"c",last_name:"3",email:"c3@gmail.com",gender:"femle",ip_address:"c22",age:"22"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"d",last_name:"4",email:"d4@gmail.com",gender:"femle",ip_address:"d22",age:"22"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"e",last_name:"5",email:"d5@gmail.com",gender:"femle",ip_address:"e22",age:"22"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"f",last_name:"6",email:"d6@gmail.com",gender:"femle",ip_address:"f22",age:"23"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"g",last_name:"7",email:"g7@gmail.com",gender:"femle",ip_address:"g22",age:"25"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"h",last_name:"8",email:"h8@gmail.com",gender:"femle",ip_address:"h22",age:"26"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"i",last_name:"9",email:"h9@gmail.com",gender:"femle",ip_address:"i22",age:"26"})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({first_name:"j",last_name:"10",email:"h10@gmail.com",gender:"male",ip_address:"j22",age:"27"})
+WriteResult({ "nInserted" : 1 })
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("613714b81c2156fce7387e71"),
+        "first_name" : "a",
+        "last_name" : "1",
+        "email" : "a1@gmail.com",
+        "gender" : "male",
+        "ip_address" : "a11",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("613714e41c2156fce7387e72"),
+        "first_name" : "b",
+        "last_name" : "2",
+        "email" : "b1@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "b22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("613714ff1c2156fce7387e73"),
+        "first_name" : "c",
+        "last_name" : "3",
+        "email" : "c3@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "c22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("6137151a1c2156fce7387e74"),
+        "first_name" : "d",
+        "last_name" : "4",
+        "email" : "d4@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "d22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("6137153c1c2156fce7387e75"),
+        "first_name" : "e",
+        "last_name" : "5",
+        "email" : "d5@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "e22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("613715551c2156fce7387e76"),
+        "first_name" : "f",
+        "last_name" : "6",
+        "email" : "d6@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "f22",
+        "age" : "23"
+}
+{
+        "_id" : ObjectId("613715781c2156fce7387e77"),
+        "first_name" : "g",
+        "last_name" : "7",
+        "email" : "g7@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "g22",
+        "age" : "25"
+}
+{
+        "_id" : ObjectId("613715951c2156fce7387e78"),
+        "first_name" : "h",
+        "last_name" : "8",
+        "email" : "h8@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "h22",
+        "age" : "26"
+}
+{
+        "_id" : ObjectId("613715af1c2156fce7387e79"),
+        "first_name" : "i",
+        "last_name" : "9",
+        "email" : "h9@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "i22",
+        "age" : "26"
+}
+{
+        "_id" : ObjectId("613715dd1c2156fce7387e7a"),
+        "first_name" : "j",
+        "last_name" : "10",
+        "email" : "h10@gmail.com",
+        "gender" : "male",
+        "ip_address" : "j22",
+        "age" : "27"
+}
+> db.users.findOne({id:ObjectId("613715dd1c2156fce7387e7a")})
+null
+> db.users.findOne({"id":ObjectId("613715dd1c2156fce7387e7a")})
+null
+> db.users.findOne({"first_name":"j"})
+{
+        "_id" : ObjectId("613715dd1c2156fce7387e7a"),
+        "first_name" : "j",
+        "last_name" : "10",
+        "email" : "h10@gmail.com",
+        "gender" : "male",
+        "ip_address" : "j22",
+        "age" : "27"
+}
+> db.users.findOne({"first_name":"h"})
+{
+        "_id" : ObjectId("613715951c2156fce7387e78"),
+        "first_name" : "h",
+        "last_name" : "8",
+        "email" : "h8@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "h22",
+        "age" : "26"
+}
+> db.user.update({"first_name":"h"},$set:{"last_name":"changed"})
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:38
+> db.user.update({"first_name":"h"},{$set:{"last_name":"changed"}})
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.user.update({"first_name":"j"},{$set:{"last_name":"changed"}})
+WriteResult({ "nMatched" : 0, "nUpserted" : 0, "nModified" : 0 })
+> db.json.find().pretty()
+> db.user.find().pretty()
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("613714b81c2156fce7387e71"),
+        "first_name" : "a",
+        "last_name" : "1",
+        "email" : "a1@gmail.com",
+        "gender" : "male",
+        "ip_address" : "a11",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("613714e41c2156fce7387e72"),
+        "first_name" : "b",
+        "last_name" : "2",
+        "email" : "b1@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "b22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("613714ff1c2156fce7387e73"),
+        "first_name" : "c",
+        "last_name" : "3",
+        "email" : "c3@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "c22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("6137151a1c2156fce7387e74"),
+        "first_name" : "d",
+        "last_name" : "4",
+        "email" : "d4@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "d22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("6137153c1c2156fce7387e75"),
+        "first_name" : "e",
+        "last_name" : "5",
+        "email" : "d5@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "e22",
+        "age" : "22"
+}
+{
+        "_id" : ObjectId("613715551c2156fce7387e76"),
+        "first_name" : "f",
+        "last_name" : "6",
+        "email" : "d6@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "f22",
+        "age" : "23"
+}
+{
+        "_id" : ObjectId("613715781c2156fce7387e77"),
+        "first_name" : "g",
+        "last_name" : "7",
+        "email" : "g7@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "g22",
+        "age" : "25"
+}
+{
+        "_id" : ObjectId("613715951c2156fce7387e78"),
+        "first_name" : "h",
+        "last_name" : "8",
+        "email" : "h8@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "h22",
+        "age" : "26"
+}
+{
+        "_id" : ObjectId("613715af1c2156fce7387e79"),
+        "first_name" : "i",
+        "last_name" : "9",
+        "email" : "h9@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "i22",
+        "age" : "26"
+}
+{
+        "_id" : ObjectId("613715dd1c2156fce7387e7a"),
+        "first_name" : "j",
+        "last_name" : "10",
+        "email" : "h10@gmail.com",
+        "gender" : "male",
+        "ip_address" : "j22",
+        "age" : "27"
+}
+> show databases
+Assigment  0.000GB
+admin      0.000GB
+config     0.000GB
+local      0.000GB
+users      0.000GB
+> db.users.update({"first_name":"j"},{$set:{"last_name":"changed"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.update({"first_name":"h"},{$set:{"last_name":"changedh"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.findOne({"first_name":"j"})
+{
+        "_id" : ObjectId("613715dd1c2156fce7387e7a"),
+        "first_name" : "j",
+        "last_name" : "changed",
+        "email" : "h10@gmail.com",
+        "gender" : "male",
+        "ip_address" : "j22",
+        "age" : "27"
+}
+> db.users.updateMany({"age":"22"},{$set:{"manychanged":"changedh"}})
+{ "acknowledged" : true, "matchedCount" : 4, "modifiedCount" : 4 }
+> db.users.find({"age":"22"})
+{ "_id" : ObjectId("613714e41c2156fce7387e72"), "first_name" : "b", "last_name" : "2", "email" : "b1@gmail.com", "gender" : "femle", "ip_address" : "b22", "age" : "22", "manychanged" : "changedh" }
+{ "_id" : ObjectId("613714ff1c2156fce7387e73"), "first_name" : "c", "last_name" : "3", "email" : "c3@gmail.com", "gender" : "femle", "ip_address" : "c22", "age" : "22", "manychanged" : "changedh" }
+{ "_id" : ObjectId("6137151a1c2156fce7387e74"), "first_name" : "d", "last_name" : "4", "email" : "d4@gmail.com", "gender" : "femle", "ip_address" : "d22", "age" : "22", "manychanged" : "changedh" }
+{ "_id" : ObjectId("6137153c1c2156fce7387e75"), "first_name" : "e", "last_name" : "5", "email" : "d5@gmail.com", "gender" : "femle", "ip_address" : "e22", "age" : "22", "manychanged" : "changedh" }
+> db.users.remove({"first_name":"d"})
+WriteResult({ "nRemoved" : 1 })
+> db.users.findOne({"first_name":"d"})
+null
+> db.users.remove({"age":"22"})
+WriteResult({ "nRemoved" : 3 })
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("613714b81c2156fce7387e71"),
+        "first_name" : "a",
+        "last_name" : "1",
+        "email" : "a1@gmail.com",
+        "gender" : "male",
+        "ip_address" : "a11",
+        "age" : "21"
+}
+{
+        "_id" : ObjectId("613715551c2156fce7387e76"),
+        "first_name" : "f",
+        "last_name" : "6",
+        "email" : "d6@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "f22",
+        "age" : "23"
+}
+{
+        "_id" : ObjectId("613715781c2156fce7387e77"),
+        "first_name" : "g",
+        "last_name" : "7",
+        "email" : "g7@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "g22",
+        "age" : "25"
+}
+{
+        "_id" : ObjectId("613715951c2156fce7387e78"),
+        "first_name" : "h",
+        "last_name" : "changedh",
+        "email" : "h8@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "h22",
+        "age" : "26"
+}
+{
+        "_id" : ObjectId("613715af1c2156fce7387e79"),
+        "first_name" : "i",
+        "last_name" : "9",
+        "email" : "h9@gmail.com",
+        "gender" : "femle",
+        "ip_address" : "i22",
+        "age" : "26"
+}
+{
+        "_id" : ObjectId("613715dd1c2156fce7387e7a"),
+        "first_name" : "j",
+        "last_name" : "changed",
+        "email" : "h10@gmail.com",
+        "gender" : "male",
+        "ip_address" : "j22",
+        "age" : "27"
+}
+>
