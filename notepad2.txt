@@ -1,0 +1,1668 @@
+> db.Movie.find({movie_name:{$eq:"Sherry"}})
+{ "_id" : ObjectId("613860ce43e08690f1e59fdc"), "id" : 18, "movie_name" : "Sherry", "movie_genre" : "Ilden", "production_year" : 2004, "budget" : 19601 }
+> db.Movie.find({movie_name:{$ne:"Sherry"}}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcd"),
+        "id" : 3,
+        "movie_name" : "Raffarty",
+        "movie_genre" : "Gerant",
+        "production_year" : 1996,
+        "budget" : 14091
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fce"),
+        "id" : 4,
+        "movie_name" : "Bridie",
+        "movie_genre" : "Porritt",
+        "production_year" : 1992,
+        "budget" : 18915
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "movie_genre" : "Pulster",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "movie_genre" : "Storck",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "movie_genre" : "Ivanyukov",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "movie_genre" : "Goad",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "movie_genre" : "Murty",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "movie_genre" : "Oaker",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "movie_genre" : "Morrel",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "movie_genre" : "Rochester",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "movie_genre" : "Pendell",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdf"),
+        "id" : 21,
+        "movie_name" : "Hedvige",
+        "movie_genre" : "Skalls",
+        "production_year" : 1993,
+        "budget" : 9145
+}
+Type "it" for more
+> db.Movie.find({budget:{$gt:1998}}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcd"),
+        "id" : 3,
+        "movie_name" : "Raffarty",
+        "movie_genre" : "Gerant",
+        "production_year" : 1996,
+        "budget" : 14091
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fce"),
+        "id" : 4,
+        "movie_name" : "Bridie",
+        "movie_genre" : "Porritt",
+        "production_year" : 1992,
+        "budget" : 18915
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "movie_genre" : "Pulster",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "movie_genre" : "Storck",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "movie_genre" : "Ivanyukov",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "movie_genre" : "Goad",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "movie_genre" : "Murty",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "movie_genre" : "Oaker",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "movie_genre" : "Morrel",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "movie_genre" : "Rochester",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "movie_genre" : "Ilden",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "movie_genre" : "Pendell",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+Type "it" for more
+> db.Movie.find({budget:{$lt:1998}}).pretty()
+> db.Movie.find({budget:{$gt:2000}}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcd"),
+        "id" : 3,
+        "movie_name" : "Raffarty",
+        "movie_genre" : "Gerant",
+        "production_year" : 1996,
+        "budget" : 14091
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fce"),
+        "id" : 4,
+        "movie_name" : "Bridie",
+        "movie_genre" : "Porritt",
+        "production_year" : 1992,
+        "budget" : 18915
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "movie_genre" : "Pulster",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "movie_genre" : "Storck",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "movie_genre" : "Ivanyukov",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "movie_genre" : "Goad",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "movie_genre" : "Murty",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "movie_genre" : "Oaker",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "movie_genre" : "Morrel",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "movie_genre" : "Rochester",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "movie_genre" : "Ilden",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "movie_genre" : "Pendell",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+Type "it" for more
+> db.Movie.find({budget:{$lt:2000}}).pretty()
+> db.Movie.find({budget:{$lte:2000}}).pretty()
+> db.Movie.find({$and:[{"production_year":{$gt:2000}},{"budget":{&gt:1000}}]}
+...
+...
+> db.Movie.find({$and:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "movie_genre" : "Pulster",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "movie_genre" : "Storck",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "movie_genre" : "Ivanyukov",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "movie_genre" : "Goad",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "movie_genre" : "Murty",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "movie_genre" : "Morrel",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "movie_genre" : "Rochester",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "movie_genre" : "Ilden",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe0"),
+        "id" : 22,
+        "movie_name" : "Bronnie",
+        "movie_genre" : "Mellonby",
+        "production_year" : 2010,
+        "budget" : 12579
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe1"),
+        "id" : 23,
+        "movie_name" : "Vivi",
+        "movie_genre" : "Norcock",
+        "production_year" : 2004,
+        "budget" : 19858
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe2"),
+        "id" : 24,
+        "movie_name" : "Chelsie",
+        "movie_genre" : "Noblett",
+        "production_year" : 2002,
+        "budget" : 16782
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe3"),
+        "id" : 25,
+        "movie_name" : "Ciel",
+        "movie_genre" : "Paice",
+        "production_year" : 2007,
+        "budget" : 16665
+}
+Type "it" for more
+> db.Movie.find({$or:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcd"),
+        "id" : 3,
+        "movie_name" : "Raffarty",
+        "movie_genre" : "Gerant",
+        "production_year" : 1996,
+        "budget" : 14091
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fce"),
+        "id" : 4,
+        "movie_name" : "Bridie",
+        "movie_genre" : "Porritt",
+        "production_year" : 1992,
+        "budget" : 18915
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "movie_genre" : "Pulster",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "movie_genre" : "Storck",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "movie_genre" : "Ivanyukov",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "movie_genre" : "Goad",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "movie_genre" : "Murty",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "movie_genre" : "Oaker",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "movie_genre" : "Morrel",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "movie_genre" : "Rochester",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "movie_genre" : "Ilden",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "movie_genre" : "Pendell",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+Type "it" for more
+> db.Movie.find({$nor:[{"production_year":{$gt:2000}},{"budget":{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdf"),
+        "id" : 21,
+        "movie_name" : "Hedvige",
+        "movie_genre" : "Skalls",
+        "production_year" : 1993,
+        "budget" : 9145
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fed"),
+        "id" : 35,
+        "movie_name" : "Anna",
+        "movie_genre" : "Mowbray",
+        "production_year" : 2000,
+        "budget" : 9956
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a006"),
+        "id" : 60,
+        "movie_name" : "Mady",
+        "movie_genre" : "Mulchrone",
+        "production_year" : 1994,
+        "budget" : 9966
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a01c"),
+        "id" : 82,
+        "movie_name" : "Rube",
+        "movie_genre" : "Iiannone",
+        "production_year" : 1994,
+        "budget" : 9848
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a059"),
+        "id" : 143,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Lowe",
+        "production_year" : 1998,
+        "budget" : 9849
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a077"),
+        "id" : 173,
+        "movie_name" : "Alberto",
+        "movie_genre" : "Glamart",
+        "production_year" : 1996,
+        "budget" : 9396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a090"),
+        "id" : 198,
+        "movie_name" : "Tadio",
+        "movie_genre" : "Carrabot",
+        "production_year" : 1991,
+        "budget" : 9892
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a096"),
+        "id" : 204,
+        "movie_name" : "Jodi",
+        "movie_genre" : "Mangeney",
+        "production_year" : 1995,
+        "budget" : 9390
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a0a3"),
+        "id" : 217,
+        "movie_name" : "Delmar",
+        "movie_genre" : "Esland",
+        "production_year" : 1994,
+        "budget" : 9252
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a0be"),
+        "id" : 244,
+        "movie_name" : "Robinet",
+        "movie_genre" : "Kyncl",
+        "production_year" : 1997,
+        "budget" : 9397
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a115"),
+        "id" : 331,
+        "movie_name" : "Mickey",
+        "movie_genre" : "Sive",
+        "production_year" : 1991,
+        "budget" : 9868
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a138"),
+        "id" : 366,
+        "movie_name" : "Elihu",
+        "movie_genre" : "Lenchenko",
+        "production_year" : 1995,
+        "budget" : 9438
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a15c"),
+        "id" : 402,
+        "movie_name" : "Edyth",
+        "movie_genre" : "Ezzell",
+        "production_year" : 1999,
+        "budget" : 9484
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a196"),
+        "id" : 460,
+        "movie_name" : "Cicily",
+        "movie_genre" : "Collens",
+        "production_year" : 1993,
+        "budget" : 9214
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a1a5"),
+        "id" : 475,
+        "movie_name" : "Maynord",
+        "movie_genre" : "Ferronier",
+        "production_year" : 1994,
+        "budget" : 9451
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a1a7"),
+        "id" : 477,
+        "movie_name" : "Kamila",
+        "movie_genre" : "Dunmore",
+        "production_year" : 1991,
+        "budget" : 9758
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a1da"),
+        "id" : 528,
+        "movie_name" : "Anallese",
+        "movie_genre" : "Pentercost",
+        "production_year" : 1996,
+        "budget" : 9591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a1f3"),
+        "id" : 553,
+        "movie_name" : "Bobinette",
+        "movie_genre" : "Baumer",
+        "production_year" : 1997,
+        "budget" : 9627
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a243"),
+        "id" : 633,
+        "movie_name" : "Jolyn",
+        "movie_genre" : "Jewar",
+        "production_year" : 1991,
+        "budget" : 9594
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a289"),
+        "id" : 703,
+        "movie_name" : "Madelon",
+        "movie_genre" : "Sanger",
+        "production_year" : 1991,
+        "budget" : 9282
+}
+Type "it" for more
+> db.Movie.find({$and:[{"production_year":{$not:2000}},{"budget":{$not:10000}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "$not needs a regex or a document",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.Movie.find({$and:[{"production_year":{$ne:2000}},{"budget":{$ne:10000}}]}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcd"),
+        "id" : 3,
+        "movie_name" : "Raffarty",
+        "movie_genre" : "Gerant",
+        "production_year" : 1996,
+        "budget" : 14091
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fce"),
+        "id" : 4,
+        "movie_name" : "Bridie",
+        "movie_genre" : "Porritt",
+        "production_year" : 1992,
+        "budget" : 18915
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "movie_genre" : "Pulster",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "movie_genre" : "Storck",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "movie_genre" : "Ivanyukov",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "movie_genre" : "Goad",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "movie_genre" : "Murty",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "movie_genre" : "Oaker",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "movie_genre" : "Morrel",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "movie_genre" : "Rochester",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "movie_genre" : "Ilden",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "movie_genre" : "Pendell",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+Type "it" for more
+> db.Movie.find({$and:[{"production_year":{$gt:2000}},{"production_year":{$lt:2010}}).pretty()
+...
+...
+> db.Movie.find({$and:[{"production_year":{$gt:2000}},{"production_year":{$lt:2010}}]}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "movie_genre" : "Kemish",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "movie_genre" : "Metson",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "movie_genre" : "Mc Carroll",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "movie_genre" : "Ilden",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "movie_genre" : "Scamel",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe1"),
+        "id" : 23,
+        "movie_name" : "Vivi",
+        "movie_genre" : "Norcock",
+        "production_year" : 2004,
+        "budget" : 19858
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe2"),
+        "id" : 24,
+        "movie_name" : "Chelsie",
+        "movie_genre" : "Noblett",
+        "production_year" : 2002,
+        "budget" : 16782
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe3"),
+        "id" : 25,
+        "movie_name" : "Ciel",
+        "movie_genre" : "Paice",
+        "production_year" : 2007,
+        "budget" : 16665
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe5"),
+        "id" : 27,
+        "movie_name" : "Leo",
+        "movie_genre" : "Baglan",
+        "production_year" : 2002,
+        "budget" : 10796
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fe9"),
+        "id" : 31,
+        "movie_name" : "Jordon",
+        "movie_genre" : "Hinkens",
+        "production_year" : 2008,
+        "budget" : 13349
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fec"),
+        "id" : 34,
+        "movie_name" : "Emmanuel",
+        "movie_genre" : "Lavallie",
+        "production_year" : 2009,
+        "budget" : 14152
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fef"),
+        "id" : 37,
+        "movie_name" : "Ruthy",
+        "movie_genre" : "Rathjen",
+        "production_year" : 2009,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59ff3"),
+        "id" : 41,
+        "movie_name" : "Sheeree",
+        "movie_genre" : "Tudball",
+        "production_year" : 2008,
+        "budget" : 14614
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59ff5"),
+        "id" : 43,
+        "movie_name" : "Alyss",
+        "movie_genre" : "Chart",
+        "production_year" : 2002,
+        "budget" : 16016
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59ff9"),
+        "id" : 47,
+        "movie_name" : "Garner",
+        "movie_genre" : "Search",
+        "production_year" : 2009,
+        "budget" : 10807
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fff"),
+        "id" : 53,
+        "movie_name" : "Bamby",
+        "movie_genre" : "Tenaunt",
+        "production_year" : 2004,
+        "budget" : 19871
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a004"),
+        "id" : 58,
+        "movie_name" : "Clari",
+        "movie_genre" : "Woodcraft",
+        "production_year" : 2007,
+        "budget" : 11748
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a009"),
+        "id" : 63,
+        "movie_name" : "Tracey",
+        "movie_genre" : "Warrillow",
+        "production_year" : 2009,
+        "budget" : 13780
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a010"),
+        "id" : 70,
+        "movie_name" : "Rachel",
+        "movie_genre" : "Macro",
+        "production_year" : 2006,
+        "budget" : 14208
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a011"),
+        "id" : 71,
+        "movie_name" : "Ania",
+        "movie_genre" : "O'Donohue",
+        "production_year" : 2001,
+        "budget" : 10082
+}
+Type "it" for more
+> db.Movie.find({}).sort({"production_year":1},{"movie_name":1}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "movie_genre" : "Pendell",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59ffa"),
+        "id" : 48,
+        "movie_name" : "Tani",
+        "movie_genre" : "Goldson",
+        "production_year" : 1990,
+        "budget" : 11542
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a034"),
+        "id" : 106,
+        "movie_name" : "Westley",
+        "movie_genre" : "Panniers",
+        "production_year" : 1990,
+        "budget" : 19348
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a06d"),
+        "id" : 163,
+        "movie_name" : "Paulette",
+        "movie_genre" : "Petts",
+        "production_year" : 1990,
+        "budget" : 13862
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a078"),
+        "id" : 174,
+        "movie_name" : "Minne",
+        "movie_genre" : "Cossom",
+        "production_year" : 1990,
+        "budget" : 15918
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a094"),
+        "id" : 202,
+        "movie_name" : "Carlos",
+        "movie_genre" : "Kenshole",
+        "production_year" : 1990,
+        "budget" : 16421
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a0a8"),
+        "id" : 222,
+        "movie_name" : "Salomone",
+        "movie_genre" : "D'Antuoni",
+        "production_year" : 1990,
+        "budget" : 17257
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a0c8"),
+        "id" : 254,
+        "movie_name" : "Cymbre",
+        "movie_genre" : "Cheese",
+        "production_year" : 1990,
+        "budget" : 18855
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a0da"),
+        "id" : 272,
+        "movie_name" : "Glenine",
+        "movie_genre" : "Ansteys",
+        "production_year" : 1990,
+        "budget" : 13680
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a0fa"),
+        "id" : 304,
+        "movie_name" : "Mylo",
+        "movie_genre" : "Addionisio",
+        "production_year" : 1990,
+        "budget" : 11761
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a127"),
+        "id" : 349,
+        "movie_name" : "Fransisco",
+        "movie_genre" : "Sinfield",
+        "production_year" : 1990,
+        "budget" : 19317
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a131"),
+        "id" : 359,
+        "movie_name" : "Alix",
+        "movie_genre" : "Norbury",
+        "production_year" : 1990,
+        "budget" : 18447
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a159"),
+        "id" : 399,
+        "movie_name" : "Jemie",
+        "movie_genre" : "Dreghorn",
+        "production_year" : 1990,
+        "budget" : 15767
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a181"),
+        "id" : 439,
+        "movie_name" : "Derril",
+        "movie_genre" : "Donoher",
+        "production_year" : 1990,
+        "budget" : 18321
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a19d"),
+        "id" : 467,
+        "movie_name" : "Cathee",
+        "movie_genre" : "Ayllett",
+        "production_year" : 1990,
+        "budget" : 14287
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a19f"),
+        "id" : 469,
+        "movie_name" : "Jenifer",
+        "movie_genre" : "Matusevich",
+        "production_year" : 1990,
+        "budget" : 11047
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a1e8"),
+        "id" : 542,
+        "movie_name" : "Trescha",
+        "movie_genre" : "McGuggy",
+        "production_year" : 1990,
+        "budget" : 16560
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a213"),
+        "id" : 585,
+        "movie_name" : "Cecelia",
+        "movie_genre" : "Domenici",
+        "production_year" : 1990,
+        "budget" : 18957
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a220"),
+        "id" : 598,
+        "movie_name" : "Maynard",
+        "movie_genre" : "Linnemann",
+        "production_year" : 1990,
+        "budget" : 15609
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e5a258"),
+        "id" : 654,
+        "movie_name" : "Clare",
+        "movie_genre" : "Dadd",
+        "production_year" : 1990,
+        "budget" : 14892
+}
+Type "it" for more
+> db.Movie.find({})skip(10)limit(5).pretty()
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:17
+> db.Movie.find({})skip(10).limit(5).pretty()
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:17
+> db.Movie.find({}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "movie_genre" : "Mitchel",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "movie_genre" : "Corney",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "movie_genre" : "Oaker",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "movie_genre" : "Gatehouse",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "movie_genre" : "Megahey",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+> db.Movie.updateMany({},{"$unset":{"movie_genre":""}})
+{ "acknowledged" : true, "matchedCount" : 1000, "modifiedCount" : 1000 }
+> db.Movie.find({}).pretty()
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcb"),
+        "id" : 1,
+        "movie_name" : "Madonna",
+        "production_year" : 2001,
+        "budget" : 12675
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcc"),
+        "id" : 2,
+        "movie_name" : "Dianna",
+        "production_year" : 2009,
+        "budget" : 18499
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcd"),
+        "id" : 3,
+        "movie_name" : "Raffarty",
+        "production_year" : 1996,
+        "budget" : 14091
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fce"),
+        "id" : 4,
+        "movie_name" : "Bridie",
+        "production_year" : 1992,
+        "budget" : 18915
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fcf"),
+        "id" : 5,
+        "movie_name" : "Kellie",
+        "production_year" : 2019,
+        "budget" : 12894
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd0"),
+        "id" : 6,
+        "movie_name" : "Frasquito",
+        "production_year" : 2018,
+        "budget" : 14802
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd1"),
+        "id" : 7,
+        "movie_name" : "Eveleen",
+        "production_year" : 2012,
+        "budget" : 13652
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd2"),
+        "id" : 8,
+        "movie_name" : "Beau",
+        "production_year" : 2012,
+        "budget" : 12460
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd3"),
+        "id" : 9,
+        "movie_name" : "Junette",
+        "production_year" : 2009,
+        "budget" : 11768
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd4"),
+        "id" : 10,
+        "movie_name" : "Cookie",
+        "production_year" : 2014,
+        "budget" : 18378
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd5"),
+        "id" : 11,
+        "movie_name" : "Neron",
+        "production_year" : 2020,
+        "budget" : 15396
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd6"),
+        "id" : 12,
+        "movie_name" : "Ferrell",
+        "production_year" : 2014,
+        "budget" : 14952
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd7"),
+        "id" : 13,
+        "movie_name" : "Sonni",
+        "production_year" : 1996,
+        "budget" : 10745
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd8"),
+        "id" : 14,
+        "movie_name" : "Afton",
+        "production_year" : 2011,
+        "budget" : 12431
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fd9"),
+        "id" : 15,
+        "movie_name" : "Siouxie",
+        "production_year" : 2020,
+        "budget" : 19591
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fda"),
+        "id" : 16,
+        "movie_name" : "Sibylle",
+        "production_year" : 2014,
+        "budget" : 18041
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdb"),
+        "id" : 17,
+        "movie_name" : "Timothy",
+        "production_year" : 2020,
+        "budget" : 13803
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdc"),
+        "id" : 18,
+        "movie_name" : "Sherry",
+        "production_year" : 2004,
+        "budget" : 19601
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fdd"),
+        "id" : 19,
+        "movie_name" : "Manolo",
+        "production_year" : 1990,
+        "budget" : 19687
+}
+{
+        "_id" : ObjectId("613860ce43e08690f1e59fde"),
+        "id" : 20,
+        "movie_name" : "Gorden",
+        "production_year" : 2001,
+        "budget" : 11932
+}
+Type "it" for more
+>
